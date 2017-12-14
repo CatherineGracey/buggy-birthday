@@ -8,9 +8,41 @@
     </style>
   </head>
   <body>
+    <script>
+    var people = [
+      {
+        name: "Hannah",
+        date: "15-05-2017"
+      },{
+        name: "Lizzy",
+        date: "25-11-2013"
+      }
+    ];
+    </script>
     <h1>Birthday Countdown</h1>
+    <div id="list">
+
+    </div>
     <script>
 
+    </script>
+    Name: <input type="text" id="newname">
+    Date: <input type="date" id="newdate">
+    <button id="addPerson">Add Person</button>
+    <script>
+      var addPerson = function(){
+        var name = document.getElementById('newname');
+        var date = document.getElementById('newdate')
+        var newname = name.value
+        var newdate = date.value
+        var newperson = {
+          name: newname
+        }
+        newperson.date = newdate;
+        people.push(newperson)
+      }
+      var addpersonbtn = document.querySelector('#addPerson')
+      addpersonbtn.addEventListener("click", addPerson)
     </script>
   </body>
 </html>

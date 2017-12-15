@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My Program</title>
+    <title>Happy Birthday Countdown</title>
     <style>
 
     </style>
@@ -24,7 +24,22 @@
 
     </div>
     <script>
-
+      function days2(){
+        var date = people[i].date
+        date = date.split("-")
+        var today = new Date
+        var days = 0
+        days = days + Number(date[0]);
+        days = days + Number(date[1] * 30 )
+        days -= today.getDate()
+        days -= today.getMonth() * 30
+        console.log(date, days)
+        i++
+      }
+      i = 0
+      while (i < people.length){
+        days = days2()
+      }
     </script>
     Name: <input type="text" id="newname">
     Date: <input type="date" id="newdate">
